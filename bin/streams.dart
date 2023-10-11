@@ -1,7 +1,11 @@
 import 'dart:async';
 
 void main() {
-  var stream = Stream.fromIterable([1, 2, 3]); //.asBroadcastStream();
+  var stream = Stream.fromIterable([
+    1,
+    2,
+    3,
+  ]); //.asBroadcastStream(); <-- to make it listenable more than once
 
   stream.listen((event) => print(event));
 
@@ -11,7 +15,11 @@ void main() {
 }
 
 streamFun() async {
-  var stream = Stream.fromIterable([4, 5, 6]);
+  var stream = Stream.fromIterable([
+    4,
+    5,
+    6,
+  ]);
 
   await for (int value in stream) {
     print(value);
